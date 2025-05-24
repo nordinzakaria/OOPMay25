@@ -8,14 +8,9 @@
 Console.WriteLine("Hello, World!");
 
 const int NUM_COUNTER = 5;
-float[] amount = new float[NUM_COUNTER];
-string[] description = new string[NUM_COUNTER];
 
-int[] day = new int[2];  // you change to this after coming back from holiday
-int[] month = new int[NUM_COUNTER];
-
-
-int[] year = new int[NUM_COUNTER];
+// only a single array needed now
+Sale[] sales = new Sale[NUM_COUNTER];
 
 int option;
 
