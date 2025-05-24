@@ -14,6 +14,7 @@ public class Sale   // think of this as a struct
     public int month;
     public int year;
 
+    // method
     public void Print()
     {
         Console.WriteLine("description: " + description);

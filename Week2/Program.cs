@@ -9,8 +9,13 @@ Console.WriteLine("Hello, World!");
 
 const int NUM_COUNTER = 5;
 
+
+Sale sale0 = new Sale(); // create a single object
+
 // only a single array needed now
-Sale[] sales = new Sale[NUM_COUNTER];
+Sale[] sales = new Sale[NUM_COUNTER];   // creating an array of object
+
+
 
 int option;
 
@@ -41,11 +46,7 @@ while (true) // infinite loop
     {   // complete this
         for (int i = 0; i < sz; i++) {
         {
-            Console.WriteLine("----|" + "Item: " + (i + 1) + "|----");
-            Console.WriteLine("Item Description: " + sales[i].description);
-            Console.WriteLine("Item Amount: " + sales[i].amount);
-            Console.WriteLine("Item Date: " + sales[i].day + "/" + sales[i].month 
-                                            + "/" + sales[i].year);
+                sales[sz].Print();
         }
 
     }
