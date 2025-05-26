@@ -10,11 +10,12 @@ Console.WriteLine("Hello, World!");
 const int NUM_COUNTER = 5;
 
 
-Sale sale0 = new Sale(); // create a single object
+//Sale sale0 = new Sale(); // create a single object
 
 // only a single array needed now
-Sale[] sales = new Sale[NUM_COUNTER];   // creating an array of object
+//Sale[] sales = new Sale[NUM_COUNTER];   // creating an array of object
 
+SaleTransactions sales = new SaleTransactions();
 
 
 int option;
@@ -33,14 +34,23 @@ while (true) // infinite loop
     {
         Console.WriteLine("Enter desc, amount and day");
 
+        // create a Sale object
+        Sale sale = new Sale();
+
+        // add it to the SaleTransactions object
+        sales.Add(sale);
+
+
+        /*
         // arrayname [ index ] . field 
         sales[sz].description = Console.ReadLine();
         sales[sz].amount = float.Parse(Console.ReadLine());
         sales[sz].day = int.Parse(Console.ReadLine());
         Console.WriteLine(" product sold: " + sales[sz].description);
         Console.WriteLine("     amount: " + sales[sz].amount);
-
         sz++;
+        */
+
     }
     else if (option == 2)
     {   // complete this
