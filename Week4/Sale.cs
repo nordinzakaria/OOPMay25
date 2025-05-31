@@ -10,18 +10,30 @@ public class Sale   // think of this as a struct
     //  fields
     public string description;  
     public float amount;
-    public int day;
-    public int month;
-    public int year;
+    public Date date;
+
+    public Sale()
+    {
+        description = string.Empty;
+        amount = 0;
+        date = new Date();
+    } 
+
+    public Sale(string description, float amount, Date date)
+    {
+        this.description = description;
+        this.amount = amount;
+        this.date = date;
+    }
 
     // method
     public void Print()
     {
         Console.WriteLine("description: " + description);
         Console.WriteLine(amount);
-        Console.WriteLine(day);
-        Console.WriteLine(month);
-        Console.WriteLine(year);
+        Console.WriteLine(date.day);
+        Console.WriteLine(date.month);
+        Console.WriteLine(date.year);
         Console.WriteLine("***************");
     }
 
