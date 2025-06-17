@@ -13,6 +13,7 @@ public class Sale   // think of this as a struct
     //public DateTime date;
     private Date date;
 
+    // constructors
     public Sale()
     {
         description = string.Empty;
@@ -27,7 +28,36 @@ public class Sale   // think of this as a struct
         this.date = date;
     }
 
-    // method
+
+    // setter & getter
+
+    public void SetAmount(float amount)
+    {
+        if (amount < 0)
+        {
+
+        }
+        this.amount = amount;
+    }
+
+    public float GetAmount()
+    {
+        return this.amount;
+    }
+
+    public Date GetDate()
+    {
+        return this.date;
+    }
+
+    public void SetDate(Date date)
+    {
+        this.date = date;
+    }
+
+
+
+    // methods
     public void Print()
     {
         Console.WriteLine("description: " + description);
