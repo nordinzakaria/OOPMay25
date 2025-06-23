@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Rectangle = Shapes.Shapes.Rectangle;
 
 namespace Shapes
 {
@@ -11,21 +12,36 @@ namespace Shapes
     {
         public void run()
         {
-            List<Circle> circles = /* BLANK */;
+            List<Shape> shapes = new List<Shape>();
 
             Random randgen = new Random();
 
+            // create circles
             for (int i = 0; i<10; i++)
             {
-                Circle circ = new Circle(/* BLANK */);
-                circles/* BLANK */;
+                Circle circ = new Circle(randgen.Next(100), 
+                                         randgen.Next(300), 
+                                         randgen.Next(300));
+                shapes.Add(circ);
+            }
+            // create rectangles
+            for (int i = 0; i < 10; i++)
+            {
+                Rectangle rect = new Rectangle(randgen.Next(100),
+                                                randgen.Next(300),
+                                                 randgen.Next(300),
+                                            randgen.Next(300));
+                shapes.Add(rect);
             }
 
+
+            // POLYMORPHISM
             float total = 0;
-            for (Circle c in  circles)
+            foreach (Shape sh in shapes)
             {
-                /* BLANK */
+                total += sh.CalcArea();
             }
+            Console.WriteLine(total);
 
 
         }
