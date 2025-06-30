@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp5
 {
-    internal class Character
+    internal abstract class Character // superclass or parent class
     {
         public Position Pos {  get; set; }
 
@@ -15,11 +15,7 @@ namespace ConsoleApp5
             Pos = new Position();
         }
 
-        public void Move()
-        {
-            Pos.X += 10;
-            Pos.Y += 10;
-        }
+        public abstract void Move();
 
     }
 }
