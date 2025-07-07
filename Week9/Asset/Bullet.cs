@@ -6,7 +6,7 @@ namespace Assets.Scripts
     public class Bullet : MonoBehaviour
     {
         Vector3 velocity;
-        float angle = 0;
+        //float angle = 0;
 
         // Use this for initialization
         void Start()
@@ -24,8 +24,8 @@ namespace Assets.Scripts
         {
             //transform.Translate(velocity * Time.deltaTime);
             transform.position += (Vector3)velocity * Time.deltaTime;
-            transform.localRotation = Quaternion.Euler(0, 0, angle);
-            angle++;
+            //transform.localRotation = Quaternion.Euler(0, 0, angle);
+            //angle++;
 
 
             Debug.Log("Bullet moved by " + velocity + ", now at " + transform.position);
